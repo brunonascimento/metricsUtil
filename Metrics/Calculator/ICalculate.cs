@@ -9,6 +9,6 @@ namespace Metrics.Calculator
 {
     interface ICalculate
     {
-        List<Metric> Calculate(ICodeBase codeBase, String className);
+        List<Metric> Calculate(ICodeBase codeBase);
     }
 }

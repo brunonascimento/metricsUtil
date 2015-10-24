@@ -37,6 +37,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -54,6 +55,7 @@
     <Compile Include="Calculator\ResponseForAClass.cs" />
     <Compile Include="Calculator\WeightedMethodsPerClass.cs" />
     <Compile Include="MetricPrinter\ConsolePrinter.cs" />
+    <Compile Include="MetricPrinter\ExcelPrinter.cs" />
     <Compile Include="MetricPrinter\IMetricPrinter.cs" />
     <Compile Include="Util\AssemblyResolver.cs" />
     <Compile Include="Calculator\Metric.cs" />

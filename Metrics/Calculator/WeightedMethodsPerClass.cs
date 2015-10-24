@@ -9,7 +9,7 @@ namespace Metrics.Calculator
 {
     class WeightedMethodsPerClass : ICalculate
     {
-        public List<Metric> Calculate(ICodeBase codeBase, String className)
+        public List<Metric> Calculate(ICodeBase codeBase)
         {
             var result = from t in codeBase.Application.Types
                          let methods = t.Methods.Where(m => !m.IsPropertyGetter && !m.IsPropertySetter && !m.IsConstructor)

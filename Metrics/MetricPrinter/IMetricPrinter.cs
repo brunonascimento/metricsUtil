@@ -8,6 +8,6 @@ namespace Metrics.MetricPrinter
 {
     interface IMetricPrinter
     {
-        void Print(List<Metric> metrics);
+        void Print(String metricName,List<Metric> metrics);
     }
 }

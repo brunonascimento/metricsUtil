@@ -9,7 +9,7 @@ namespace Metrics.Calculator
 {
     class LackOfCohesionInMethods : ICalculate
     {
-        public List<Metric> Calculate(ICodeBase codeBase, string className)
+        public List<Metric> Calculate(ICodeBase codeBase)
         {
             var result = from t in codeBase.Application.Types
                          where t.IsClass

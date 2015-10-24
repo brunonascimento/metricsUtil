@@ -9,7 +9,7 @@ namespace Metrics.Calculator
 {
     class ResponseForAClass : ICalculate
     {
-        public List<Metric> Calculate(ICodeBase codeBase, string className)
+        public List<Metric> Calculate(ICodeBase codeBase)
         {
             var result = from m in codeBase.Application.Methods
                          where !m.IsThirdParty

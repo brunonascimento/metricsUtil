@@ -9,7 +9,7 @@ namespace Metrics.Calculator
 {
     class CouplingBetweenObjectClasses : ICalculate
     {
-        public List<Metric> Calculate(ICodeBase codeBase, string className)
+        public List<Metric> Calculate(ICodeBase codeBase)
         {
             var result = from t in codeBase.Application.Types
                          let typesUsed = t.TypesUsed.ExceptThirdParty()

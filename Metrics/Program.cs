@@ -115,10 +115,40 @@ namespace Metrics
 
 
             Calculator.ICalculate calc = new Calculator.NumberOfChildren();
-            var result = calc.Calculate(codeBase, "dapper");
-            IMetricPrinter m = new ConsolePrinter();
-            m.Print(result);
+            var result = calc.Calculate(codeBase);
 
+            IMetricPrinter m = new ExcelPrinter();
+            m.Print("NumberOfChildren",result);
+
+            calc = new Calculator.CouplingBetweenObjectClasses();
+            result = calc.Calculate(codeBase);
+
+            m = new ExcelPrinter();
+            m.Print("CouplingBetweenObject", result);
+
+            calc = new Calculator.DepthOfInheritanceTree();
+            result = calc.Calculate(codeBase);
+
+            m = new ExcelPrinter();
+            m.Print("DepthOfInheritanceTree", result);
+
+            calc = new Calculator.LackOfCohesionInMethods();
+            result = calc.Calculate(codeBase);
+
+            m = new ExcelPrinter();
+            m.Print("LackOfCohesionInMethods", result);
+
+            calc = new Calculator.ResponseForAClass();
+            result = calc.Calculate(codeBase);
+
+            m = new ExcelPrinter();
+            m.Print("ResponseForAClass", result);
+
+            calc = new Calculator.WeightedMethodsPerClass();
+            result = calc.Calculate(codeBase);
+
+            m = new ExcelPrinter();
+            m.Print("WeightedMethodsPerClass", result);
             // 6) use the code model API to query code and do develop any algorithm you need!
             // For example here we are looking for complex methods
             /*var complexMethods = (from m in codeBase.Application.Methods

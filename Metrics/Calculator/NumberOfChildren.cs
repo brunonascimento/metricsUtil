@@ -9,7 +9,7 @@ namespace Metrics.Calculator
 {
     class NumberOfChildren : ICalculate
     {
-        public List<Metric> Calculate(ICodeBase codeBase, String className)
+        public List<Metric> Calculate(ICodeBase codeBase)
         {
             var result = from t in codeBase.Application.Types
                          where t.IsClass
